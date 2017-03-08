@@ -6,6 +6,7 @@ namespace Chapter1
 {
     public class Welcome : MonoBehaviour
     {
+        private string myMessage = "Welcome";
 
         // Use this for initialization
         void Start()
@@ -21,8 +22,10 @@ namespace Chapter1
 
         void MyWelcomeMessage ()
         {
-            Debug.Log("Welcome!");
+            Debug.Log(myMessage);
         }
     }
 
 }
+
+
