@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Chapter1
+{
+    public class Shoot : MonoBehaviour
+    {
+        private float fireRate = 0.3f; //fire bullets every 0.3 seconds
+        private float nextFire;
+
+        // Use this for initialization
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            CheckForInput();
+        }
+
+        void CheckForInput()
+        {
+            /*
+            if(Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire) //if player clicks left-mouse button the gun will shoot. 
+            {
+                nextFire = Time.time + fireRate; //incremental increase from beginning of time
+                Debug.Log("Key Pressed"); //gives warning for key pressed
+            }
+            */
+
+            if (Input.GetButton("Fire1") && Time.time > nextFire) //if player clicks left-mouse button the gun will shoot. 
+            {
+                nextFire = Time.time + fireRate; //incremental increase from beginning of time
+                Debug.Log("Key Pressed"); //gives warning for key pressed
+            }
+
+        }
+    }
+}
+
