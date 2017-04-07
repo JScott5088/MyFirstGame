@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Chapter1
+{
+    public class WalkThroughWall:MonoBehaviour
+    {
+        void OnEnable()
+        {
+            gameObject.layer = LayerMask.NameToLayer("Not Solid"); //when the script is enabled, set Not Solid
+        }
+
+        void OnDisable()
+        {
+            gameObject.layer = LayerMask.NameToLayer("Default"); //when the script is disabled, set back to default
+        }
+
+    }
+
+}
+
